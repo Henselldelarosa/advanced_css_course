@@ -1,0 +1,25 @@
+Responsive Design{
+  Fluid layouts
+  Media queries
+  Responsive images
+  Correct units
+  Destop
+}
+
+Maintainable and Scalable Code{
+  Clean
+  Easy to Understand
+  Growth
+  Reusable
+  How to Organize Files
+  How to Name Classes
+  How to Structure HTML
+}
+
+Web Performance{
+  Less HTTP request
+  Less Code
+  Use a CSS Preprocessor
+  Less Images
+  Compress Images
+}

@@ -1,0 +1,18 @@
+WHAT HAPPENS TO CSS WHEN WE LOAD UP A WEBPAGE
+
+Load HTML => Parse HTML{
+  Load CSS => {
+    Parse CSS{
+      1. Resolving confilct
+         with CSS declaration
+         (cascade)
+       2. Process final CSS Values
+    } => {
+      CSS Object Model(CSSOM) =>{
+    }
+  }
+} => Document Object(Dom) =>
+
+Render tree => Website rendering:
+               the visual formatting model => Final render website
+}
