@@ -1,0 +1,92 @@
+1-THE BOX MODEL
+-'CONTENT:' text, images, etc;
+
+-'PADDING:' transparent are around the content, inside of the box;
+
+-'BORDER:' goes around the padding and the content;
+
+-'MARGIN:' space between boxes;
+
+-'FILL AREA:' area that gets filled with background color
+  or background images.
+
+
+1-THE BOX MODEL: HEIGHT AND WIDTH
+-'TOTAL WIDTH' =
+  {right border + right padding + specified width + left padding + left border}
+
+-'TOTAL HEIGHT' =
+  {top border + top padding + specified height + bottom padding + bottom border}
+
+-EXAMPLE = height = 0 + 20px + 100px + 20px + 0 = 140px
+
+
+2-BOX TYPES: INLINE, BLOCK-LEVEL AND INLINE-BLOCK
+
+BLOCK-LEVEL BOXES{
+  -Elements formatted visually as blocks.
+  -100% of parent's width.
+  -Vertically, one after another.
+  -Box-model applies as shown.
+
+  display:block{
+    (display: flex)
+    (display: list-items)
+    (display: table)
+  }
+}
+
+
+INLINE BOXES{
+  -Content is distributed in lines.
+  -Occupies only content's spaces.
+  -No line-breaks.
+  -No heights and widths.
+  -Paddings and margins only
+   horizontal (left and right).
+
+   {display: inline}
+}
+
+INLINE-BLOCK BOXES{
+  -A mix of block and inline.
+  -Occupies only content's space.
+  -No line-breaks.
+  -Box-model applies as showed.
+
+  {display: inline-block}
+}
+
+
+3.POSITIONING SCHEMES: NORMAL FLOW, ABSOLUTE POSITIONING AND FLOAT
+
+NORMAL FLOW{
+  -Default positioning scheme;
+  -'NOT' floated;
+  -'NOT' absolute positioned;
+  -Elements laid out according to their source order.
+
+  DEFAULT => {position: relative}
+}
+
+FLOATS{
+  -'ELEMENT IS REMOVED FROM THE NORMAL FLOW;
+  -Text and inline Elements will wrap around
+   the floated element;
+  -The container will not adjust its height
+   to the element.
+
+   {(float: left)
+    (float: right)}
+}
+
+
+ABSOLUTE POSITIONING{
+  -ELEMENT IS REMOVED FROM THE NORMAL FLOW;
+  -No impact on surrounding contentor elements;
+  -We use top, bottom, left and right to offset the;
+   element from its relative positioned container;
+
+   {(position:absolute)
+    (position: fixed)}
+}

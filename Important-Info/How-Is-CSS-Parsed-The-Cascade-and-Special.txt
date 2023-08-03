@@ -1,0 +1,239 @@
+part1
+
+The Cascade (The 'C' IN CSS)
+
+Cascade{
+  Process of combining different stylesheet and Resolving
+  conflit between different CSS rules and declarations, when
+  more than one rule is applied to a certain element.
+
+  Parse CSS{
+    1.Resolve conflicting CSS declarations (cascade)
+    2.Process final CSS values.
+  }
+
+  Declarations{
+    1.Author
+    2.User
+    3.Browser
+  }
+
+  IMPORTANCE (WEIGHT) => SPECIFITY => SOURCE ORDER
+
+  IMPORTANCE{
+    1.User !Important Declarations
+    2.Authort !Important Declarations
+    3.Author Declarations
+    4.User Declarations
+    5.Default Browser Declarations
+
+  } => Same importance?{
+    1.inline styles
+    2.IDs
+    3.Classes, pseudo-classes, attributes
+    4.Elements, pseudo-elements
+
+  } => Same SPECIFITY?{
+    The last declaration in the code will overide all other
+    declarationsand will be applied.
+  }
+}
+
+
+CASCADE AND SPECIFITY: WHAT YOU NEED TO KNOW
+-CSS declarations maked with '!important' have the height priority;
+
+-But, only use '!important' as a last resorce. It's better to use
+ correct specificities - << more maintaniable code! >>.
+
+-Inline styles will always have priority over style in external stylesheet;
+
+-A selector contains 1 ID is more specific than one with 1000 classes;
+
+-A selector with 1 class is more specific than one with 1000 elements;
+
+-The universal selector '*' has no specific value(0,0,0,0);
+
+-Rely more on << specificy >> than on the << order >> of selector;
+
+-But, rely on the order when using 3rd-party stylesheets - always put your
+ author stylesheet last;
+
+
+Part 2
+HOW UNITES ARE CONVERTED FROM RELATIVE TO ABSOLUTE(PX)
+
+html, body{
+  font-size: 16px;
+  width: 80vw
+}
+
+header{
+  font-size: 150%;
+  padding: 2em;
+  margin-bottom: 10rem;
+  heigh: 90vh;
+  width: 1000px;
+}
+
+.header-child{
+  font-size: 3em;
+  padding: 10%;
+}
+
+
+% (fonts){
+  Example(X) = 150% from header tag
+
+  How to convert to pixels = { x% parent's computed font-size }
+
+  Results = {
+    24px because the parent <<html, body>> font size is
+    16px so 100% is 16x and half would be 8 so 16 + 8 = 24
+    }
+}
+
+% (length){
+  Example(X) = 10% from .header-class
+
+  How to convert to pixels = {x% * parent's computed width}
+
+  Results = {
+    100px because the parent in this case the <<header>> tag
+    width is 1000px so 1000px * 10% = 100px
+    }
+}
+
+Font-Based
+em (font){
+  Example(X) = 3em in header-child class
+
+  How to convert to pixels = {x * parent computed font-size}
+
+  Results = {
+    72px because the <<header>> tag has a font size of 24px
+    so 24px * 3 = 72px
+    }
+}
+
+em (length){
+  Example(X) = 2em from <<header>> tag
+
+  How to convert to pixels = {x * current element computed font-size}
+
+  Results = {
+    48px this is because it uses the font-size to measure
+    inside the <<header>> tag the font size is 24px so it
+    takes the 24px and multiplies it by 2 and that will
+    be the padding given.
+  }
+}
+
+rem{
+  Example(X) = 10rem from <<header>> tag
+
+  How to convert to pixels = { x * root computed font-size}
+
+  Results = {
+    160px The root here is the <<html, body>> which has a font size
+    of 16px so the rem takes the font size of the root
+    and multiplies it by the given rem in this case would be
+    10 * 16px = 160px
+  }
+}
+
+Viewport-based{
+  vw{
+    Example(X) = 80vw from <<html, body>>
+
+    How to convert to pixels = {x * 1% of viewport width}
+
+    Results = {80% of the current viewport height}
+  }
+
+  vh{
+    Example(X) = 90vh from the <<header>> tag
+
+    How to convert to pixels = {x * 1% of viewport height}
+
+    Results = {90% of the current viewport height}
+  }
+}
+
+
+CSS VALUE PROCESSING: WHAT YOU NEED TO KNOW
+-Each property has a initial value, used if nothing is declared
+ (and if is no inheritance - see next lecture)
+
+-Browser specificy a 'root font-size' for each page (usually 16px)
+
+-Percentages and relative values are always converted to pixels.
+
+-Percentages are measure relative to their parent's font-size,
+ if used to specify font-size.
+
+-Percentages are measure relative to their parent's width,
+ if used to specify length.
+
+
+-em are measure relative to their 'parents' font-size, if used
+ to specificy font-size.
+
+-em are measure relative to the 'current' font-size, if used
+ to specificy length.
+
+-rem are always measure relative to the 'document's root' font-size.
+
+-vh and vw are simply percentages measurements of the viewport's
+ height and width.
+
+
+
+ PART 3
+
+ INHERITANCE IN CSS
+
+ EXAPLE{
+  Let's analyse line-height on .child
+
+  .parent{
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .child{
+    font-size: 25px;
+  }
+ }
+
+yes
+{ Every CSS property must have a value }
+      {Is there a cascade value?}
+      => {YES{
+          Specified value = Cascade value
+          }}
+
+      =>{NO{
+        Is the property inherited?
+        (specific to each property)
+        {YES{
+          Specified value = computed value of parent element
+        }}
+      }}
+
+INHERITANCE: WHAT YOU NEED TO KNOW
+-Inheritance passes the values for some specific properties from
+ parent to child - 'more maintaniable code';
+
+- Ppropertiies related to text are inherited: font-family,
+ font-size, color, etc;
+
+-The compued value of a property is what gets inherited,
+ 'not' the declared value;
+
+-Inheritance of a property only works if no one declares a value
+ for that property;
+
+-The inherit keyword forces inherit on a certain property;
+
+-The inherit keyword resets a property to its initial value;

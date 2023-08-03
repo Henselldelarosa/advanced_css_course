@@ -1,0 +1,25 @@
+THE THINK-BUILD-ARCHITE MINDSET
+
+Responsive Design,
+Maintainable and scalable code,
+Web Performance{
+  -Clean
+  -Modular
+  -Reusable
+  -Ready for growth
+}
+
+Think{
+  -'THINK' about the layout of your webpage or web
+    app before writing code.
+}
+
+Build{
+  -'BUILD' your layout in HTML and CSS with a
+    consistent structure for naming classes.
+}
+
+Architect{
+  -Create a logical 'ARCHITETURE' for your
+   CSS with files and folders.
+}

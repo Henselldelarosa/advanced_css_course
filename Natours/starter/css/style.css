@@ -1,22 +1,40 @@
+/* in lesson 18 change all px to rem */
+
 /* lession 6 */
 /* resets */
-*{
+*,
+/* lesson18 */
+*::after,
+*::before
+{
   /* resests margin */
   margin: 0;
   /* resets padding */
   padding: 0;
   /* the total height and width are not added to the box */
-  box-sizing: border-box;
+
+  /* lesson 18 */
+  /* box-sizing: border-box; */
+  box-sizing: inherit;
+}
+
+/* lesson 18 */
+html {
+  font-size: 62.5%;
 }
 
 /* lession 6 */
 body{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* lesson 18 comment font-size out */
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+
+  /* lesson 18 */
+  box-sizing: border-box;
 }
 
 /* lession 6 */
@@ -36,15 +54,15 @@ body{
 }
 
 /* lession 7 */
-.logobox{
+.header__logobox{
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 /* lession 7 */
-.logo{
-  height: 35px;
+.header__logo{
+  height: 3.5rem;
 }
 
 /* lesson 8 */
@@ -53,7 +71,7 @@ body{
 } */
 
 /* lession 7 */
-.text-box{
+.header__text-box{
   position: absolute;
   top: 40%;
   left: 50%;
@@ -75,15 +93,15 @@ text-transform: uppercase;
 backface-visibility: hidden;
 
 /* lesson 9 */
-margin-bottom: 60px;
+margin-bottom: 6rem;
 }
 
 /* lession 7 */
-.header-primary-main{
+.header-primary--main{
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   /* lesson 8 */
   animation-name: moveInLeft;
@@ -100,11 +118,11 @@ margin-bottom: 60px;
 }
 
 /* lession 7 */
-.heading-primary-sub{
+.heading-primary--sub{
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
 
   /* lesson 8 */
   animation-duration: 1s;
@@ -115,7 +133,7 @@ margin-bottom: 60px;
 @keyframes moveInLeft{
   0%{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 /*
   60%{
@@ -123,7 +141,7 @@ margin-bottom: 60px;
   } */
 
   80%{
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100%{
@@ -136,11 +154,11 @@ margin-bottom: 60px;
 @keyframes moveInRight{
   0%{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80%{
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100%{
@@ -153,11 +171,11 @@ margin-bottom: 60px;
 @keyframes moveInBottom{
   0%{
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   80%{
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100%{
@@ -171,12 +189,13 @@ margin-bottom: 60px;
 .btn:visited{
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   /* gives the elemen its own space */
   /* lesson 9 */
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all .2s;
+  font-size: 1.6rem;
 
   /* lesson 10 */
   position: relative;
@@ -184,20 +203,20 @@ margin-bottom: 60px;
 
 /* lesson 9 */
 .btn:hover{
-  transform: translateY(-3px);
+  transform: translateY(-.3rem);
   /* the first direction is the x the second is the bottom
   third is the blure*/
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 /* lesson 9 */
 .btn:active{
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  transform: translateY(-.1rem);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
 /* lesson 9 */
-.btn-white{
+.btn--white{
   background-color: #fff;
   color: gray;
 }
@@ -208,7 +227,7 @@ content: '';
 display: inline-block;
 height: 100%;
 width: 100%;
-border-radius: 100px;
+border-radius: 10rem;
 position: absolute;
 top: 0;
 left: 0;
@@ -217,7 +236,7 @@ transition: all .4s;
 }
 
 /* lesson 10 */
-.btn-white::after{
+.btn--white::after{
   background-color: #fff;
 }
 
@@ -229,7 +248,7 @@ transition: all .4s;
 }
 
 /* lesson 10 */
-.btn-animated{
+.btn--animated{
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
 }
