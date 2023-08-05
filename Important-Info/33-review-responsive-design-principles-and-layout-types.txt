@@ -1,0 +1,65 @@
+REVIW: 'BASIC RESPONSIVE DESIGN PRINCIPLES'{
+  -FLUID LAYOUTS:{
+    1-To allow webpages to adapt to the current viewport
+      'width' (or even height).
+
+    2.Use % (or vh/vw) unit insted of 'px' for elements that
+      should adapt to viewport (usually layout).
+
+    3.Use 'max-width' instead of 'width'.
+  }
+
+  -RESPONSIVE UNITS:{
+    1.Use 'rem' unit instead of 'px' for most 'length'.
+
+    2.To make it easy to scale the entire layout down (or up)
+      automatically.
+  }
+
+  -FLEXIBLE IMAGES:{
+    1.By default, images don't scale automatically as we
+      change the viewport, so we need to fix that.
+
+    2.Always use % for image dimensions, together with the
+      max-width property.
+  }
+
+  -MEDIA QUERIES:{
+    1.To change CSS style on certain viewport 'widths'
+      (called breakpoints)
+  }
+
+
+  -LAYOUTS TYPES:{
+    # This Project
+    FLOAT LAYOUTS:{
+      -The 'old way of building layouts' of all size, using
+       the float CSS property. Still used, but getting
+       outdated.
+    }
+
+
+    # Second Project
+    FLEXBOX:{
+      -Modern way to laying out elements in a '1-dimensional row' without
+       using floats. Perfect for 'component layouts'.
+    }
+
+    # Third Project
+    CSS Grid:{
+      -For laying out element in a fully-fledge '2-dimensional grid'.
+       Perfect for "page layouts and complex components".
+    }
+  }
+
+  -WHY USE A FLOAT LAYOUT IN THIS PROJECT?:{
+    1."The focus of this project is on using moder CSS properties and techniques:"
+      clips, transform, animations, background videos, etc.
+
+    2.Even though flexbox and CSS Grid are more modern, "every web developer should
+      still know how to float layout work"
+
+    3.As a profeional developer, "your job will include working with older CSS codebase",
+      which will contain float layouts.
+  }
+}

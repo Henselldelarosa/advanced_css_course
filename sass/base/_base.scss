@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before
+{
+  margin: 0;
+  padding: 0;
+  /* the total height and width are not added to the box */
+
+  /* lesson 18 */
+  /* box-sizing: border-box; */
+  box-sizing: inherit;
+}
+
+
+html {
+  // this defines what one rem is
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+}
