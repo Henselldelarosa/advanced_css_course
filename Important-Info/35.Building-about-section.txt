@@ -1,0 +1,7 @@
+WHAT YOU WILL LEARN IN THIS LECTURE
+1. Think about components;
+2. How and why use utility classes;
+3. How to use the background-clip property;
+4. How to transform multiple properties simultaneously;
+5. How to use the outline-offset property together with outline;
+6. How to style elements that are Not hovered while others are.

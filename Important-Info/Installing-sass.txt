@@ -1,3 +1,11 @@
 run {npm init}
 to install sass run{ npm install node-sass --save-dev}
 also run {npm install jquery --save}
+
+
+# To start live
+run {live-server}
+#  to have SASS compile by itself go into the package.json
+# and in the script add
+{"compile:sass": "node-sass sass/main.scss Natours/starter/css/style.css -w"}
+then run {npm run compile:sass}
