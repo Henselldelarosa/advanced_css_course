@@ -1,0 +1,6 @@
+WHAT YOU WILL LEARN IN THIS LECTURE
+1. How to build an amazing, rotation card;
+2. How to use perspective in CSS;
+3. How to use tha backface-visibility property;
+4. Using background blend modes;
+5. How and when to use box-decoration-break;
