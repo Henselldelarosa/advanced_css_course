@@ -1,0 +1,6 @@
+WHAT YOU WILL LEARN IN THIS LECTURE
+1. What the 'checkbox hack' is and how it works;
+2. How to create custome animation timing functions using cubic bezier curves;
+3. How to animate 'solid-color gradients';
+4. How abd wghy to use tansform-origin;
+5. In general: create an amazing creatice effect!
